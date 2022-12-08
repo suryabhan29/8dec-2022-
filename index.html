@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Array data type</title>
+        <style>
+            /*
+            selector{
+                property:value
+            }
+            */
+            h1[data-suryabhan="suryabhan"]{
+                background-color: red;
+                color: white;
+                padding: 20px;
+                border-radius: 50px;
+            }
+        </style>
+        <script>
+
+        </script>
+    </head>
+    <body>
+        <h1 data-suryabhan="suryabhan">.</h1>
+        <p id="news1p"></p>
+
+        <h1 class="n1h1">.</h1>
+        <p class="n1p1"></p>
+        <hr >
+        <h1 class="n2h2">.</h1>
+        <p class="n2p2"></p>
+        <hr >
+        <h1 class="n3h3">.</h1>
+        <p class="n3p3"></p>
+        <hr >
+        <h1 class="n4h4">.</h1>
+        <p class="n4p4"></p>
+        <script src="./js/script.js"></script>
+        <script>
+            // lets creat array
+            // i can use var let and conts keywords 
+
+
+            let students = ['Anil',"Bhanu",`oklabs`,'gautham',"sampat",`harish`]; // square brakets are array
+
+            // elements access by the index number(1st element call is number-0)
+
+            // arrayname [indexnumber]
+
+            // 1st way to see js output is console.log
+
+            console.log('hello mr '+students[1]); // this plus work here to concatination opretor
+
+            // 2nd way to see js output is window.alert
+
+          //  window.alert('hello mr "'+students[3]+' how are you"'); // concatination opretor
+
+            // 3rd way to see js output is inner.HTML
+
+            // attribute selector value start with dobule cots
+
+          let h1 = document.querySelector('h1[data-suryabhan'); // this square bracket is not array this is a custom attribute
+
+            // i want to follow dry principle
+            h1.innerHTML = `Hello `+students[2];
+
+            const $allnews = [
+            {       // property : value
+                n1h1: `Gujarat Assembly Election News: BJP's Rivaba Jadeja leads by nearly 40,000 votes`,
+                n1p1: `Gujarat Assembly Election Results 2022: The BJP is hoping to secure an unprecedented seventh consecutive term in Gujarat, which is prime minister Narendra Modi's home state.`
+            },
+            {   // property : value
+                n2h2: `Drishyam 2, Qala, and Uunchai are proof that Bollywood is alive and kicking
+                        Drishyam 2, Qala, and Uunchai have all found success in varying forms.`,
+                n2p2: "The success of films like Drishyam 2, Qala, and Uunchai seems to have punctured the notion that Bollywood is 'dead' and quite rightly so."
+            },
+            {
+                    // p:v
+                n3h3: `'Embarrassing performance. We didn't expect India to lose to Bangladesh': BCCI
+                        India suffered their second consecutive ODI series defeat in Bangladesh(ANI )`,
+                n3p3: `India's string of underwhelming performances has forced the BCCI to call for a review meeting after the Bangladesh tour.`
+            },
+            {
+                // property: value
+                n4h4: `Common gestures with different meanings around the worldThe German football team players covering their mouth for a group photo(Pressebildagentur ULMER/picture alliance)`,
+                n4p4: "The German national football team covered their mouths at the World Cup in protest against FIFA, but a completely different message was sent in Qatar."
+            },
+                {}
+            ];          // Array of object
+
+            document.querySelector(`h1.n1h1`).innerHTML = $allnews[0].n1h1; // technique 1st object.propefty
+            document.querySelector('p.n1p1').innerHTML = $allnews[0]["n1p1"] // technique 2nd object ["property"]
+            document.querySelector(`h1.n1h1`).style.color = 'green'
+
+            let n2express1 = 'n2h2';
+
+            document.querySelector("h1.n2h2").innerHTML =$allnews[1][n2express1]// technique 3rd expression
+            document.querySelector('p.n2p2').innerHTML =$allnews[1].n2p2; // technique 1st
+            document.querySelector("h1.n2h2").style.color = `red`
+
+            document.querySelector('h1.n3h3').innerHTML = $allnews[2][`n3h3`] // teachnique 1st object.property
+            document.querySelector('p.n3p3').innerHTML = $allnews[2]["n3p3"] // teachnique 2nd object["property"]
+            document.querySelector('h1.n3h3').style.color = `brown`
+            document.querySelector('p.n3p3').style.color = "red" // here i aplly css to use only a java script
+
+           
+            document.querySelector('h1.n4h4').innerHTML = $allnews[3]['n4h4'] // teachnique 1st object.property
+            
+            document.querySelector(`p.n4p4`).innerHTML =$allnews[3]['n4p4'] // i used agin teachnique 3rd expression
+        </script> 
+    </body>
+</html>
